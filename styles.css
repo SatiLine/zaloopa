@@ -1,0 +1,213 @@
+body {
+    color: #fff;
+    margin: 0;
+    min-height: 100vh;
+    background: #181c24;
+}
+
+#welcome-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('space.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#welcome-section h1 {
+    text-align: center;
+    margin-bottom: 36px;
+    font-size: 2.5em;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #000a;
+}
+
+.welcome-form-card {
+    background: rgba(230,230,250,0.92);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #0003;
+    padding: 32px 28px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 320px;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+#welcome-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+}
+
+#welcome-form label {
+    font-size: 1.15em;
+    color: #4B0082;
+    font-weight: 600;
+    background: transparent;
+    padding: 10px 0 6px 0;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 300px;
+    min-width: 180px;
+    box-sizing: border-box;
+}
+
+#welcome-form input[type="text"] {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: none;
+    background: #E6E6FA;
+    color: #4B0082;
+    font-size: 1.1em;
+    width: 90%;
+    max-width: 300px;
+    min-width: 180px;
+    box-sizing: border-box;
+    font-weight: 600;
+    margin-bottom: 0;
+    outline: none;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 2px 8px #c8b0e033;
+}
+
+#welcome-form input[type="text"]:focus {
+    box-shadow: 0 4px 16px #b39ddb55;
+}
+
+#welcome-form button[type='submit'] {
+    background-color: #b5b5e3;
+    color: #42086c;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 8px #c8b0e033;
+}
+
+#welcome-form button[type='submit']:hover {
+    background-color: #d890d8;
+}
+
+/* Главная страница */
+#main-section {
+    background: #23272f;
+    color: #fff;
+    min-height: 100vh;
+    padding-bottom: 32px;
+}
+
+#nav-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+#nav-buttons button {
+    margin-right: 0;
+    padding: 8px 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background: #2d8cff;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#nav-buttons button.active {
+    background: #1b5fa7;
+    box-shadow: 0 2px 8px #2d8cff44;
+}
+
+/* Плитки */
+.tile-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.tile {
+    background: #23272f;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #0004;
+    width: 180px;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 10px 18px 10px;
+    position: relative;
+}
+.tile:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 6px 24px #2d8cff44;
+}
+.tile img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #181c24;
+}
+.tile-title {
+    margin-top: 12px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #b3c6ff;
+    text-align: center;
+    min-height: 40px;
+}
+
+/* Модальное окно */
+.modal-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal {
+    background: #23272f;
+    border-radius: 14px;
+    max-width: 340px;
+    padding: 32px 24px 24px 24px;
+    color: #fff;
+    box-shadow: 0 6px 32px #000a;
+    position: relative;
+    text-align: center;
+}
+.modal-title {
+    font-size: 1.3em;
+    margin-bottom: 14px;
+    font-weight: bold;
+    color: #2d8cff;
+}
+.modal-close {
+    position: absolute;
+    top: 12px; right: 18px;
+    font-size: 1.5em;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+.modal-close:hover { opacity: 1; }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>SpaceX Explorer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Приветственная страница -->
+    <section id="welcome-section">
+        <h1>Добро пожаловать!</h1>
+        <div class="welcome-form-card">
+            <form id="welcome-form">
+                <label for="username">Введите ваше имя:</label>
+                <input type="text" id="username" name="username" required>
+                <button type="submit">Далее</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Главная страница -->
+    <section id="main-section" style="display:none;">
+        <header>
+            <h2 id="greeting"></h2>
+        </header>
+        <main>
+            <div id="nav-buttons">
+                <button id="ships-btn" class="active">Корабли SpaceX</button>
+                <button id="starlink-btn">Спутники Starlink</button>
+                <button id="dragons-btn">Корабли Dragon</button>
+            </div>
+
+            <section id="ships-page">
+                <div id="ships-controls"></div>
+                <div id="ships-data"></div>
+                <div id="ships-statistics"></div>
+            </section>
+
+            <section id="starlink-page" style="display:none;">
+                <div id="starlink-controls"></div>
+                <div id="starlink-data"></div>
+                <div id="starlink-statistics"></div>
+            </section>
+
+            <section id="dragons-page" style="display:none;">
+                <div id="dragons-controls"></div>
+                <div id="dragons-data"></div>
+                <div id="dragons-statistics"></div>
+            </section>
+        </main>
+    </section>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
